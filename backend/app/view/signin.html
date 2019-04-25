@@ -11,7 +11,7 @@
   <meta name="keywords" content="Pingendo restaurant food aquamarine free template bootstrap 4">
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="aquamarine.css" type="text/css">
+  <link rel="stylesheet" href="./public/css/aquamarine.css" type="text/css">
   <!-- Script: Make my navbar transparent when the document is scrolled to top -->
   <script src="js/navbar-ontop.js"></script>
   <!-- Script: Animated entrance -->
@@ -21,19 +21,19 @@
 <body>
   <!-- Navbar -->
   <!-- Cover -->
-  <div class="align-items-center d-flex cover section-aquamarine py-5" style="background-image: url(&quot;/static/assets/restaurant/cover_light.jpg&quot;);">
+  <div class="align-items-center d-flex cover section-aquamarine py-5" style="background-image: url(&quot;./public/assets/restaurant/cover_light.jpg&quot;);">
     <div class="container">
       <div class="row">
         <div class="col-lg-7 align-self-center text-lg-left text-center">
           <h1 class="mb-0 mt-5 display-3 text-center">脊柱侧弯患者<br>管理系统</h1>
         </div>
         <div class="col-lg-5 p-2">
-          <form class="p-4 bg-muted" method="post" action=""  style="border-radius:4px">
+          <form class="p-4 bg-muted" method="post" action="/signin"  style="border-radius:4px">
             <h4 class="mb-4 text-center"><b>登陆</b></h4>
             <div class="form-group"> <label>医生ID</label>
-              <input class="form-control" placeholder="请输入您的ID"> </div>
+              <input class="form-control" name="username" placeholder="请输入您的ID"> </div>
             <div class="form-group"> <label>密码</label>
-              <input type="form-control" class="form-control" placeholder="请输入您的密码"> </div>
+              <input type="form-control" name="password" class="form-control" placeholder="请输入您的密码"> </div>
             <button type="submit" class="btn mt-4 btn-block p-2 btn-primary"><b>登陆</b></button>
           </form>
         </div>
