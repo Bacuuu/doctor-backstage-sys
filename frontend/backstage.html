@@ -11,7 +11,14 @@
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="./Vali Admin - Free Bootstrap 4 Admin Template_files/main.css">
     <!-- Font-icon css-->
-    <link rel="stylesheet" type="text/css" href="./Vali Admin - Free Bootstrap 4 Admin Template_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.staticfile.org/font-awesome/5.8.1/css/all.min.css" rel="stylesheet"> -->
+    
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.css">
+    <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.js"></script>
+
   </head>
   <body class="app sidebar-mini rtl  pace-done" data-gr-c-s-loaded="true"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
   <div class="pace-progress-inner"></div>
@@ -86,19 +93,90 @@
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="./Vali Admin - Free Bootstrap 4 Admin Template_files/48.jpg" alt="User Image">
         <div>
           <p class="app-sidebar__user-name">李医生</p>
-          <p class="app-sidebar__user-designation">Frontend Developer</p>
+          <p class="app-sidebar__user-designation"></p>
         </div>
       </div>
-      <ul class="app-menu">
-        <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">患者小A</span></a>
-        </li>
-        <li><a class="app-menu__item" href="http://pratikborsadiya.in/vali-admin/index.html">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">患者小B</span></a>
-        </li>
-      </ul>
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" 
+                 href="#collapseOne" style="color:white;margin-left:30px">
+                 5°-15°患者 <i class="fa fa-chevron-circle-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <ul class="app-menu">
+                <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                  <i class="app-menu__icon fa fa-dashboard"></i>
+                  <span class="app-menu__label">患者小A</span></a>
+                </li>
+                <li><a class="app-menu__item" href="http://pratikborsadiya.in/vali-admin/index.html">
+                  <i class="app-menu__icon fa fa-dashboard"></i>
+                  <span class="app-menu__label">患者小B</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" 
+                 href="#collapseTwo" style="color:white;margin-left:30px">
+                 15°-25°患者 <i class="fa fa-chevron-circle-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+              cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+              vice lomo.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" 
+                 href="#collapseThree" style="color:white;margin-left:30px">
+                 25°-35°患者 <i class="fa fa-chevron-circle-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+              cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+              vice lomo.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" 
+                 href="#collapseThree" style="color:white;margin-left:30px">
+                 35°-45°患者 <i class="fa fa-chevron-circle-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+              cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+              vice lomo.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
     </aside>
 
     <main class="app-content">
@@ -130,6 +208,13 @@
             </div>
           </div>
         </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-clock-o fa-3x"></i>
+            <div class="info">
+                <h4>目前建议穿戴时间：22小时</h4>
+            </div>
+          </div>
+        </div>
         <!-- <div class="col-md-6 col-lg-3">
           <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
             <div class="info">
@@ -147,42 +232,94 @@
           </div>
         </div> -->
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">今日数据</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="today_data" width="751" height="422" style="width: 751px; height: 422px;"></canvas>
-            </div>
+
+
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" 
+                 href="#collapseInfo" style="margin-left:40%">
+                 诊断历史<i class="fa fa-angle-double-down"></i>
+              </a>
+            </h4>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">今日穿戴饼状图</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="today_pie" width="751" height="422" style="width: 751px; height: 422px;"></canvas>
+          <div id="collapseInfo" class="panel-collapse collapse in" style="margin-left:0%">
+            <div class="panel-body">
+
+              <table class="table">
+                <thead>
+                <tr>
+                    <th>诊断日期</th>
+                    <th>姓名</th>
+                    <th>检查项目</th>
+                    <th>检查情况</th>
+                    <th>建议最小佩戴时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2018.01.05</td>
+                    <td>小A </td>
+                    <td>XXXX</td>
+                    <td>较为严重</td>
+                    <td>23h</td>
+                </tr>
+                <tr>
+                  <td>2018.05.07</td>
+                  <td>小A </td>
+                  <td>XXXX</td>
+                  <td>较为严重</td>
+                  <td>23h</td>
+              </tr>                <tr>
+                <td>2018.09.05</td>
+                <td>小A </td>
+                <td>XXXX</td>
+                <td>有所好转，仍较严重</td>
+                <td>22h</td>
+            </tr>                <tr>
+              <td>2019.04.02</td>
+              <td>小A </td>
+              <td>XXXX</td>
+              <td>良好</td>
+              <td>21h</td>
+          </tr>
+                </tbody>
+            </table>
+
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-          <div class="col-md-6">
-            <div class="tile">
-              <h3 class="tile-title">本周数据</h3>
-              <div class="embed-responsive embed-responsive-16by9">
-                <canvas class="embed-responsive-item" id="week_data" width="751" height="422" style="width: 751px; height: 422px;"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="tile">
-              <h3 class="tile-title">本周穿戴饼状图</h3>
-              <div class="embed-responsive embed-responsive-16by9">
-                <canvas class="embed-responsive-item" id="week_pie" width="751" height="422" style="width: 751px; height: 422px;"></canvas>
-              </div>
+
+
+      <div id="slider" style="width:1000px;height:12px;margin-left: 0%;margin-top:30px"></div>
+      <span style="margin-bottom: 30px;margin-left: 0%;font-size: 20px">30天前 ———— 0天前数据</span>
+
+      <div class="row" style="margin-left:0%">
+        <div class="col-md-6">
+          <div class="tile" style="width:1024px">
+            <h3 class="tile-title">患者佩戴时间数据</h3>
+            <div class="embed-responsive embed-responsive-16by9" style="width:996px">
+              <canvas class="embed-responsive-item" id="today_data" width="751" height="422" style="width: 751px; height: 422px;"></canvas>
             </div>
           </div>
         </div>
+        <br>
+      </div>
+      <div class="row" style="margin-left:0%">
+        <div class="col-md-6">
+          <div class="tile" style="width:1024px">
+            <h3 class="tile-title">压力传感器数据</h3>
+            <div class="embed-responsive embed-responsive-16by9" style="width:996px">
+              <canvas class="embed-responsive-item" id="pressure_data" width="751" height="422" style="width: 751px; height: 422px;"></canvas>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+
 
       <!-- <div class="row">
         <div class="col-md-6">
@@ -215,7 +352,7 @@
       </div> -->
     </main>
     <!-- Essential javascripts for application to work-->
-    <script async="" src="./Vali Admin - Free Bootstrap 4 Admin Template_files/analytics.js.下载"></script><script src="./Vali Admin - Free Bootstrap 4 Admin Template_files/jquery-3.2.1.min.js.下载"></script>
+    <!-- <script async="" src="./Vali Admin - Free Bootstrap 4 Admin Template_files/analytics.js.下载"></script><script src="./Vali Admin - Free Bootstrap 4 Admin Template_files/jquery-3.2.1.min.js.下载"></script> -->
     <script src="./Vali Admin - Free Bootstrap 4 Admin Template_files/popper.min.js.下载"></script>
     <script src="./Vali Admin - Free Bootstrap 4 Admin Template_files/bootstrap.min.js.下载"></script>
     <script src="./Vali Admin - Free Bootstrap 4 Admin Template_files/main.js.下载"></script>
@@ -224,19 +361,56 @@
     <!-- Page specific javascripts-->
     <script type="text/javascript" src="./Vali Admin - Free Bootstrap 4 Admin Template_files/chart.js.下载"></script>
     <script type="text/javascript">
+      $( "#slider" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+      //   slide: function( event, ui ) {
+      //   $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      // }
+      }
+      );
       var todayData = {
-      	labels: ["January", "February", "March", "April", "May", "June"],
+      	labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],
         // labels: new Array(1440),
       	datasets: [
       		{
       			label: "My First dataset",
+      			fillColor: "rgba(220,20,20,0.2)",
+      			strokeColor: "rgba(220,220,220,1)",
+      			pointColor: "rgba(220,220,220,1)",
+      			pointStrokeColor: "#fff",
+      			pointHighlightFill: "#fff",
+      			pointHighlightStroke: "rgba(220,220,220,1)",
+      			data: [22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22]
+      		},
+      		{
+      			label: "My Second dataset",
+      			fillColor: "rgba(151,187,205,0.2)",
+      			strokeColor: "rgba(151,187,205,1)",
+      			pointColor: "rgba(151,187,205,1)",
+      			pointStrokeColor: "#fff",
+      			pointHighlightFill: "#fff",
+      			pointHighlightStroke: "rgba(151,187,205,1)",
+      			data: [17,19,23,21,22,22,17,22,19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,0]
+      		}
+      	]
+      };
+    
+      var pressureData = {
+      	labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],
+        // labels: new Array(1440),
+      	datasets: [
+      		{
+            label: "My First dataset",
       			fillColor: "rgba(220,220,220,0.2)",
       			strokeColor: "rgba(220,220,220,1)",
       			pointColor: "rgba(220,220,220,1)",
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(220,220,220,1)",
-      			data: [65, 19, 80, 81, 56, 45]
+      			data: [17,19,23,21,22,22,24,15,15,21,23,22,17,22,19,23,22,16,23,22,22,21,24,22,24,23,21,20,24,21,0]
       		},
       		{
       			label: "My Second dataset",
@@ -246,96 +420,29 @@
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [28, 48, 40, 19, 86, 45]
+      			data: [17,19,23,21,22,22,17,22,19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,0]
       		},
           {
-      			label: "My Second dataset",
+      			label: "My Third dataset",
       			fillColor: "rgba(151,187,205,0.2)",
       			strokeColor: "rgba(151,187,205,1)",
       			pointColor: "rgba(151,187,205,1)",
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [11, 22, 33, 44, 55, 45]
+      			data: [19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,17,19,23,21,22,22,17,22,0]
       		}
       	]
       };
-      var weekData = {
-      	labels: ["January", "February", "March", "April", "May", "June"],
-        // labels: new Array(1440),
-      	datasets: [
-      		{
-      			label: "My First dataset",
-      			fillColor: "rgba(220,220,220,0.2)",
-      			strokeColor: "rgba(220,220,220,1)",
-      			pointColor: "rgba(220,220,220,1)",
-      			pointStrokeColor: "#fff",
-      			pointHighlightFill: "#fff",
-      			pointHighlightStroke: "rgba(220,220,220,1)",
-      			data: [5, 29, 30, 18, 340, 0]
-      		},
-      		{
-      			label: "My Second dataset",
-      			fillColor: "rgba(151,187,205,0.2)",
-      			strokeColor: "rgba(151,187,205,1)",
-      			pointColor: "rgba(151,187,205,1)",
-      			pointStrokeColor: "#fff",
-      			pointHighlightFill: "#fff",
-      			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [68, 18, 10, 119, 36, 55]
-      		},
-          {
-      			label: "My Second dataset",
-      			fillColor: "rgba(151,187,205,0.2)",
-      			strokeColor: "rgba(151,187,205,1)",
-      			pointColor: "rgba(151,187,205,1)",
-      			pointStrokeColor: "#fff",
-      			pointHighlightFill: "#fff",
-      			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [15, 122, 53, 14, 95, 5]
-      		}
-      	]
-      };
-      var todayPie = [
-      	{
-      		value: 300,
-      		color: "#46BFBD",
-      		highlight: "#5AD3D1",
-      		label: "Complete"
-      	},
-      	{
-      		value: 50,
-      		color:"#F7464A",
-      		highlight: "#FF5A5E",
-      		label: "In-Progress"
-      	}
-      ];      
-      var weekPie = [
-      	{
-      		value: 10,
-      		color: "#46BFBD",
-      		highlight: "#5AD3D1",
-      		label: "Complete"
-      	},
-      	{
-      		value: 106,
-      		color:"#F7464A",
-      		highlight: "#FF5A5E",
-      		label: "In-Progress"
-      	}
-      ]
-      
+
       var today_data = $("#today_data").get(0).getContext("2d");
       var lineChart = new Chart(today_data).Line(todayData);
-      
-      var today_pie = $("#today_pie").get(0).getContext("2d");
-      var pieChart = new Chart(today_pie).Pie(todayPie);
 
-      var week_data = $("#week_data").get(0).getContext("2d");
-      var lineChart = new Chart(week_data).Line(weekData);
+      var pressure_data = $("#pressure_data").get(0).getContext("2d");
+      var lineChart = new Chart(pressure_data).Line(pressureData);
       
-      var week_pie = $("#week_pie").get(0).getContext("2d");
-      var pieChart = new Chart(week_pie).Pie(weekPie);
+      //  var today_pie = $("#today_pie").get(0).getContext("2d");
+      // var pieChart = new Chart(today_pie).Pie(todayPie); 
     </script>
     <!-- Google analytics script-->
     <!-- <script type="text/javascript">
