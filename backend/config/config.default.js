@@ -40,6 +40,21 @@ module.exports = appInfo => {
     encrypt: true,
   };
 
+  // database
+  config.mongoose = {
+    client: {
+      url: 'mongodb://127.0.0.1:27017/docSys',
+      options: {},
+    },
+  };
+
+  // csrf token
+  config.security = {
+    csrf: {
+      _scrf: '_csrf',
+    },
+  };
+
   // static
   config.static = {
     // 这里的prerix为请求资源时候的目录前缀

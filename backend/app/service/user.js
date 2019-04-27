@@ -5,7 +5,7 @@ const Service = require('egg').Service;
 class UserService extends Service {
   async verify(username, password) {
     const { ctx } = this;
-    const verify_result = ctx.model.User.findOne({
+    const verify_result = await ctx.model.User.findOne({
       username,
     });
     if (!verify_result || !verify_result._id) {

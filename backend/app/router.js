@@ -16,6 +16,9 @@ module.exports = app => {
   // username password
   router.post('/signin', controller.user.signin);
 
+  // 医生管理界面
+  router.get('/managePage', controller.user.managePage);
+
   // 用户登出
   // router.post('/signout', controller.user.signout);
 
