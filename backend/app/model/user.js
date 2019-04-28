@@ -23,10 +23,10 @@ module.exports = app => {
     },
 
     // 该医生的患者
-    patient: {
+    patient: [{
       type: Schema.Types.ObjectId,
-      ref: 'Patient',
-    },
+      ref: 'patient',
+    }],
 
 
   });

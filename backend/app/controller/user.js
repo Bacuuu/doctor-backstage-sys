@@ -10,7 +10,7 @@ class UserController extends Controller {
     const verify_result = await ctx.service.user.verify(username, password);
     if (verify_result.success) {
       ctx.session.user = username;
-      ctx.redirect('/managePage');
+      ctx.redirect(`/managePage/${username}`);
     } else {
       ctx.body = verify_result;
     }
@@ -18,7 +18,19 @@ class UserController extends Controller {
 
   async managePage() {
     const { ctx } = this;
-    await ctx.render('managePage');
+    const { username } = ctx.params;
+    console.log(username);
+    if (ctx.session.user !== username) {
+      ctx.body = '越权操作!用户不符合';
+      return;
+    }
+    const user_info = await ctx.service.user.findUserByName(username);
+    if (!user_info) {
+      ctx.body = '没有该用户';
+      return;
+    }
+    console.log(user_info)
+    await ctx.render('managePage', { user_info });
   }
 }
 

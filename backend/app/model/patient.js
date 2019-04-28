@@ -30,6 +30,15 @@ module.exports = app => {
         required: true,
       },
     },
+    // 患者分类
+    // '0' --> 5-15°
+    // '1' --> 15-25°
+    // '2' --> 25-35°
+    // '3' --> 35-45°
+    category: {
+      type: String,
+      default: '0',
+    },
     // 诊断历史
     treatment_history: [{
       date: String,

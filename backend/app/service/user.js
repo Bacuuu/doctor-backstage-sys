@@ -25,5 +25,20 @@ class UserService extends Service {
       message: '账号密码错误',
     };
   }
+
+  async findUserByName(username) {
+    const { ctx } = this;
+    const user_info = await ctx.model.User.findOne({
+      username,
+    })
+      .populate({
+        path: 'patient',
+        select: 'basicInfo.name category buff debuff',
+      });
+    if (!user_info || !user_info._id) {
+      return false;
+    }
+    return user_info;
+  }
 }
 module.exports = UserService;
