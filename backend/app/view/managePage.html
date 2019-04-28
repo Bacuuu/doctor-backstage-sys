@@ -97,23 +97,32 @@
         </div>
       </div>
 
+ 
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" 
-                 href="#collapseOne" style="color:white;margin-left:30px">
-                 5°-15°患者 <i class="fa fa-chevron-circle-down"></i>
-              </a>
+              <a style="color:white;margin-left:30px">
+                 5°-15°患者 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseOne"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in">
             <div class="panel-body">
               <ul class="app-menu">
+                {% for item in user_info.patient %}
+                  {% if item.category == '0' %}
+                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                      <i class="app-menu__icon fa fa-dashboard"></i>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
                 <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
                   <i class="app-menu__icon fa fa-dashboard"></i>
                   <span class="app-menu__label">患者小A</span></a>
                 </li>
+
                 <li><a class="app-menu__item" href="http://pratikborsadiya.in/vali-admin/index.html">
                   <i class="app-menu__icon fa fa-dashboard"></i>
                   <span class="app-menu__label">患者小B</span></a>
@@ -125,71 +134,79 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" 
-                 href="#collapseTwo" style="color:white;margin-left:30px">
-                 15°-25°患者 <i class="fa fa-chevron-circle-down"></i>
-              </a>
+              <a style="color:white;margin-left:30px">
+                 15°-25°患者 &nbsp;&nbsp;&nbsp;
+              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseTwo"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
           <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
-              Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
-              cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
-              vice lomo.
+              <ul class="app-menu">
+                {% for item in user_info.patient %}
+                  {% if item.category == '1' %}
+                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                      <i class="app-menu__icon fa fa-dashboard"></i>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
             </div>
           </div>
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" 
-                 href="#collapseThree" style="color:white;margin-left:30px">
-                 25°-35°患者 <i class="fa fa-chevron-circle-down"></i>
-              </a>
+              <a style="color:white;margin-left:30px">
+                 25°-35°患者 &nbsp;&nbsp;&nbsp;
+              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseThree"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
           <div id="collapseThree" class="panel-collapse collapse">
             <div class="panel-body">
-              Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
-              cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
-              vice lomo.
+              <ul class="app-menu">
+                {% for item in user_info.patient %}
+                  {% if item.category == '2' %}
+                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                      <i class="app-menu__icon fa fa-dashboard"></i>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
             </div>
           </div>
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" 
-                 href="#collapseThree" style="color:white;margin-left:30px">
-                 35°-45°患者 <i class="fa fa-chevron-circle-down"></i>
-              </a>
+              <a style="color:white;margin-left:30px">
+                 35°-45°患者 &nbsp;&nbsp;&nbsp;
+              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseFour"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
-          <div id="collapseThree" class="panel-collapse collapse">
+          <div id="collapseFour" class="panel-collapse collapse">
             <div class="panel-body">
-              Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
-              cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
-              vice lomo.
+              <ul class="app-menu">
+                {% for item in user_info.patient %}
+                  {% if item.category == '3' %}
+                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                      <i class="app-menu__icon fa fa-dashboard"></i>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
             </div>
           </div>
         </div>
-
       </div>
+
 
 
     </aside>
 
     <main class="app-content">
-      <!-- <div class="app-title">
-        <div>
-          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
-          <p>A free and open source Bootstrap 4 admin template</p>
-        </div>
-        <ul class="app-breadcrumb breadcrumb">
-          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="http://pratikborsadiya.in/vali-admin/index.html#">Dashboard</a></li>
-        </ul>
-      </div> -->
       <div class="row">
         <div class="col-md-6 col-lg-3">
           <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
@@ -361,6 +378,10 @@
     <!-- Page specific javascripts-->
     <script type="text/javascript" src="../public/js/chart.js"></script>
     <script type="text/javascript">
+
+
+  
+    // chart渲染
       $( "#slider" ).slider({
         range: true,
         min: 0,
