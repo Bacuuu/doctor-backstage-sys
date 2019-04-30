@@ -107,26 +107,17 @@
               </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseOne"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse in">
+          <div id="collapseOne" class="panel-collapse collapse" style="color:white">
             <div class="panel-body">
               <ul class="app-menu">
                 {% for item in user_info.patient %}
                   {% if item.category == '0' %}
-                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                    <li><a class="app-menu__item" id='{{item._id}}' style="background-color:coral">
                       <i class="app-menu__icon fa fa-dashboard"></i>
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
                     </li>
                   {% endif %}
                 {% endfor %}
-                <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
-                  <i class="app-menu__icon fa fa-dashboard"></i>
-                  <span class="app-menu__label">患者小A</span></a>
-                </li>
-
-                <li><a class="app-menu__item" href="http://pratikborsadiya.in/vali-admin/index.html">
-                  <i class="app-menu__icon fa fa-dashboard"></i>
-                  <span class="app-menu__label">患者小B</span></a>
-                </li>
               </ul>
             </div>
           </div>
@@ -139,14 +130,14 @@
               </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseTwo"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
-          <div id="collapseTwo" class="panel-collapse collapse">
+          <div id="collapseTwo" class="panel-collapse collapse" style="color:white">
             <div class="panel-body">
               <ul class="app-menu">
                 {% for item in user_info.patient %}
                   {% if item.category == '1' %}
-                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                    <li><a class="app-menu__item" id='{{item._id}}'>
                       <i class="app-menu__icon fa fa-dashboard"></i>
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
                     </li>
                   {% endif %}
                 {% endfor %}
@@ -162,14 +153,14 @@
               </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseThree"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
-          <div id="collapseThree" class="panel-collapse collapse">
+          <div id="collapseThree" class="panel-collapse collapse" style="color:white">
             <div class="panel-body">
               <ul class="app-menu">
                 {% for item in user_info.patient %}
                   {% if item.category == '2' %}
-                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                    <li><a class="app-menu__item" id='{{item._id}}'>
                       <i class="app-menu__icon fa fa-dashboard"></i>
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
                     </li>
                   {% endif %}
                 {% endfor %}
@@ -185,14 +176,14 @@
               </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseFour"><i class="fa fa-chevron-down" style="color:white"></i></a>
             </h4>
           </div>
-          <div id="collapseFour" class="panel-collapse collapse">
+          <div id="collapseFour" class="panel-collapse collapse"  style="color:white">
             <div class="panel-body">
               <ul class="app-menu">
                 {% for item in user_info.patient %}
                   {% if item.category == '3' %}
-                    <li><a class="app-menu__item active" href="http://pratikborsadiya.in/vali-admin/index.html">
+                    <li><a class="app-menu__item" id='{{item._id}}'>
                       <i class="app-menu__icon fa fa-dashboard"></i>
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span></a>
+                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
                     </li>
                   {% endif %}
                 {% endfor %}
@@ -211,24 +202,24 @@
         <div class="col-md-6 col-lg-3">
           <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
             <div class="info">
-              <h4>姓名：小A</h4>
-              <h4>年龄：12</h4>
-              <h4>性别：男</h4>
+              <h4 id="name">姓名：</h4>
+              <h4 id="age">年龄：</h4>
+              <h4 id="gender">性别：</h4>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
             <div class="info">
-                <h4>治疗时间：7个月2天</h4>
-                <h4>上次复查时间:2018-01-05</h4>
+                <h4 id="treatment_time">治疗时间：</h4>
+                <h4 id="last_time">上次复查时间:</h4>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="widget-small primary coloured-icon"><i class="icon fa fa-clock-o fa-3x"></i>
             <div class="info">
-                <h4>目前建议穿戴时间：22小时</h4>
+                <h4 id="sug_wear_time">目前建议穿戴时间:</h4>
             </div>
           </div>
         </div>
@@ -264,7 +255,6 @@
           </div>
           <div id="collapseInfo" class="panel-collapse collapse in" style="margin-left:0%">
             <div class="panel-body">
-
               <table class="table">
                 <thead>
                 <tr>
@@ -275,33 +265,9 @@
                     <th>建议最小佩戴时间</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>2018.01.05</td>
-                    <td>小A </td>
-                    <td>XXXX</td>
-                    <td>较为严重</td>
-                    <td>23h</td>
-                </tr>
-                <tr>
-                  <td>2018.05.07</td>
-                  <td>小A </td>
-                  <td>XXXX</td>
-                  <td>较为严重</td>
-                  <td>23h</td>
-              </tr>                <tr>
-                <td>2018.09.05</td>
-                <td>小A </td>
-                <td>XXXX</td>
-                <td>有所好转，仍较严重</td>
-                <td>22h</td>
-            </tr>                <tr>
-              <td>2019.04.02</td>
-              <td>小A </td>
-              <td>XXXX</td>
-              <td>良好</td>
-              <td>21h</td>
-          </tr>
+
+                <tbody id="treatment_history">
+
                 </tbody>
             </table>
 
@@ -378,24 +344,54 @@
     <!-- Page specific javascripts-->
     <script type="text/javascript" src="../public/js/chart.js"></script>
     <script type="text/javascript">
+    // 患者被点击
+    $('.app-menu__item').click((tag) => {
+      const { id } = tag.currentTarget;
+      $('.app-menu__item').removeClass('active');
+      $(`#${id}`).addClass('active')
+      $.post('/patientInfo',{id},(data) => {
+        $('#name').html(`姓名：${data.basicInfo.name}`);
+        $('#age').html(`年龄：${data.basicInfo.age}`);
+        if (data.basicInfo.gender === true) {
+          $('#gender').html(`性别：男`);
+        } else {
+          $('#gender').html(`性别：女`);
+        }
+        $('#treatment_time').html(`治疗时间：${data.basicInfo.treatment_time}`);
+        $('#last_time').html(`上次复查时间：${data.treatment_history[data.treatment_history.length-1].date}`)
+        $('#sug_wear_time').html(`目前建议穿戴时间：${data.basicInfo.sug_wear_time}h`)
+        // 诊断历史的html
+        let treatment_history = '';
+        for (item of data.treatment_history) {
+          console.log(item)
+          treatment_history += `
+          <tr>
+            <td>${item.date}</td>
+            <td>${data.basicInfo.name}</td>
+            <td>${item.project}</td>
+            <td>${item.info}</td>
+            <td>${item.min_wear_time}</td>
+          </tr>`
+        }
 
+        $('#treatment_history').html(treatment_history)
+      })
+    })
 
-  
+  let mmin = 0,mmax = 30;
     // chart渲染
       $( "#slider" ).slider({
         range: true,
         min: 0,
-        max: 500,
-        values: [ 75, 300 ],
-      //   slide: function( event, ui ) {
-      //   $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-      // }
-      }
-      );
-      var todayData = {
-      	labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],
-        // labels: new Array(1440),
-      	datasets: [
+        max: 30,
+        values: [ 10, 20 ],
+        slide: function( event, ui ) {
+          mmin = ui.values[0];
+          mmax = ui.values[1];
+          // console.log(`1---${mmin}----2------${mmax}`)
+          var todayData = {
+      	labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"].slice(mmin,mmax),
+        datasets: [
       		{
       			label: "My First dataset",
       			fillColor: "rgba(220,20,20,0.2)",
@@ -404,7 +400,7 @@
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(220,220,220,1)",
-      			data: [22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22]
+      			data: [22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22].slice(mmin,mmax),
       		},
       		{
       			label: "My Second dataset",
@@ -414,13 +410,13 @@
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [17,19,23,21,22,22,17,22,19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,0]
+      			data: [17,19,23,21,22,22,17,22,19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,0].slice(mmin,mmax),
       		}
       	]
       };
-    
+      console.log(todayData.labels);
       var pressureData = {
-      	labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],
+      	labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"].slice(mmin,mmax),
         // labels: new Array(1440),
       	datasets: [
       		{
@@ -431,7 +427,7 @@
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(220,220,220,1)",
-      			data: [17,19,23,21,22,22,24,15,15,21,23,22,17,22,19,23,22,16,23,22,22,21,24,22,24,23,21,20,24,21,0]
+      			data: [17,19,23,21,22,22,24,15,15,21,23,22,17,22,19,23,22,16,23,22,22,21,24,22,24,23,21,20,24,21,0].slice(mmin,mmax),
       		},
       		{
       			label: "My Second dataset",
@@ -441,7 +437,7 @@
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [17,19,23,21,22,22,17,22,19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,0]
+      			data: [17,19,23,21,22,22,17,22,19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,0].slice(mmin,mmax),
       		},
           {
       			label: "My Third dataset",
@@ -451,7 +447,7 @@
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,17,19,23,21,22,22,17,22,0]
+      			data: [19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,17,19,23,21,22,22,17,22,0].slice(mmin,mmax),
       		}
       	]
       };
@@ -461,6 +457,11 @@
 
       var pressure_data = $("#pressure_data").get(0).getContext("2d");
       var lineChart = new Chart(pressure_data).Line(pressureData);
+
+      }
+      });
+
+
       
       //  var today_pie = $("#today_pie").get(0).getContext("2d");
       // var pieChart = new Chart(today_pie).Pie(todayPie); 

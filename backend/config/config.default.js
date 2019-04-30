@@ -48,11 +48,21 @@ module.exports = appInfo => {
     },
   };
 
+  // 修改默认的程序端口
+  config.cluster = {
+    listen: {
+      host: '127.0.0.1',
+      port: 80,
+    },
+  };
+
   // csrf token
   config.security = {
-    csrf: {
-      _scrf: '_csrf',
-    },
+    csrf: false,
+    // {
+    //   _scrf: '_csrf',
+    //   enable： false,
+    // },
   };
 
   // static

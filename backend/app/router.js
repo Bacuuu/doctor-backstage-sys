@@ -28,10 +28,13 @@ module.exports = app => {
 
   // 获取患者具体信息
   // id 患者id
-  // router.post('/patientInfo', controller.patient.getPatientInfo);
+  router.post('/patientInfo', controller.patient.getPatientInfo);
 
   // 标记患者
   // id 患者id
-  // router.post('/buffPatient', controller.patient.buff);
+  router.post('/buffPatient', controller.patient.buff);
 
+  // 取消标记患者
+  // id 患者id
+  router.post('/releaseBuffPatient', controller.patient.releaseBuff);
 };
