@@ -20,7 +20,7 @@ class PatientController extends Controller {
       ctx.body = '传入id为空';
     }
     const update_result = await ctx.service.patient.buffPatient(id);
-    ctx.body = update_result.msg;
+    ctx.body = update_result.success;
   }
 
   async releaseBuff() {
@@ -30,7 +30,7 @@ class PatientController extends Controller {
       ctx.body = '传入id为空';
     }
     const update_result = await ctx.service.patient.releaseBuffPatient(id);
-    ctx.body = update_result.msg;
+    ctx.body = update_result.success;
   }
 }
 
