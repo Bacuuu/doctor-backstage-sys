@@ -11,7 +11,7 @@ class UserService extends Service {
     if (!verify_result || !verify_result._id) {
       return {
         success: false,
-        message: '不存在该用户!',
+        message: '<script>alert("不存在该用户!");history.back(-1)</script>',
       };
     }
     if (verify_result.password === password) {
@@ -22,7 +22,7 @@ class UserService extends Service {
     }
     return {
       success: false,
-      message: '账号密码错误',
+      message: '<script>alert("账号密码错误!")</script>',
     };
   }
 
