@@ -32,6 +32,12 @@ class PatientController extends Controller {
     const update_result = await ctx.service.patient.releaseBuffPatient(id);
     ctx.body = update_result.success;
   }
+
+  async ajaxGetData() {
+    const { ctx } = this;
+    ctx.body = 'here';
+    console.log('here');
+  }
 }
 
 module.exports = PatientController;

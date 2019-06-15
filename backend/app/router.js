@@ -37,4 +37,6 @@ module.exports = app => {
   // 取消标记患者
   // id 患者id
   router.post('/releaseBuffPatient', controller.patient.releaseBuff);
+
+  router.post('/ajaxGetData', controller.patient.ajaxGetData);
 };
