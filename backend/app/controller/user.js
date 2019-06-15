@@ -39,6 +39,12 @@ class UserController extends Controller {
     const { ctx } = this;
     await ctx.render('parent');
   }
+
+  async fault() {
+    const { ctx } = this;
+    await ctx.render('fault');
+  }
+
 }
 
 module.exports = UserController;

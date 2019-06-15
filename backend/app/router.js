@@ -21,6 +21,7 @@ module.exports = app => {
 
   router.get('/parent', controller.user.parent);
 
+  router.get('/fault', controller.user.fault);
   // 用户登出
   // router.post('/signout', controller.user.signout);
 
