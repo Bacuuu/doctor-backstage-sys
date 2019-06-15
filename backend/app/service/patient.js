@@ -88,5 +88,12 @@ class PatientService extends Service {
       msg: '取消标记成功',
     };
   }
+
+  async ajaxGetData() {
+    const { ctx } = this;
+    return await ctx.model.Data.findOne({}).sort({
+      time: -1,
+    });
+  }
 }
 module.exports = PatientService;

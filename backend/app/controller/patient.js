@@ -35,7 +35,8 @@ class PatientController extends Controller {
 
   async ajaxGetData() {
     const { ctx } = this;
-    ctx.body = 'here';
+    const data = await ctx.service.patient.ajaxGetData();
+    ctx.body = data;
     console.log('here');
   }
 }
