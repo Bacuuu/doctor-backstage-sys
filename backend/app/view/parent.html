@@ -89,146 +89,19 @@
       </ul>
     </header>
     <!-- Sidebar menu-->
-    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-
+    {# <div class="app-sidebar__overlay" data-toggle="sidebar"></div> #}
     <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../public/assets/img/48.jpg" alt="User Image">
-        <div>
-          <p class="app-sidebar__user-name">{{user_info.name}}</p>
-          <p class="app-sidebar__user-designation"></p>
-        </div>
-      </div>
-
- 
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a style="color:white;margin-left:30px">
-                 5°-15°患者 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseOne"><i class="fa fa-chevron-down" style="color:white"></i></a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse" style="color:white">
-            <div class="panel-body">
-              <ul class="app-menu">
-                {% for item in user_info.patient %}
-                  {% if item.category == '0' %}
-                    {% if item.debuff %}
-                      <li><a class="app-menu__item" id='{{item._id}}' style="background-color:coral">
-                    {% else %}
-                      <li><a class="app-menu__item" id='{{item._id}}'>
-                    {% endif %}
-                      <i class="app-menu__icon fa fa-dashboard"></i>
-                    {% if item.buff %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag" style="color:crimson"></i></a>
-                    {% else %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
-                    {% endif %}
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a style="color:white;margin-left:30px">
-                 15°-25°患者 &nbsp;&nbsp;&nbsp;
-              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseTwo"><i class="fa fa-chevron-down" style="color:white"></i></a>
-            </h4>
-          </div>
-          <div id="collapseTwo" class="panel-collapse collapse" style="color:white">
-            <div class="panel-body">
-              <ul class="app-menu">
-                {% for item in user_info.patient %}
-                  {% if item.category == '1' %}                    
-                    {% if item.debuff %}
-                      <li><a class="app-menu__item" id='{{item._id}}' style="background-color:coral">
-                    {% else %}
-                      <li><a class="app-menu__item" id='{{item._id}}'>
-                    {% endif %}
-                      <i class="app-menu__icon fa fa-dashboard"></i>
-                    {% if item.buff %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag" style="color:crimson"></i></a>
-                    {% else %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
-                    {% endif %}
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a style="color:white;margin-left:30px">
-                 25°-35°患者 &nbsp;&nbsp;&nbsp;
-              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseThree"><i class="fa fa-chevron-down" style="color:white"></i></a>
-            </h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse" style="color:white">
-            <div class="panel-body">
-              <ul class="app-menu">
-                {% for item in user_info.patient %}
-                  {% if item.category == '2' %}
-                    {% if item.debuff %}
-                      <li><a class="app-menu__item" id='{{item._id}}' style="background-color:coral">
-                    {% else %}
-                      <li><a class="app-menu__item" id='{{item._id}}'>
-                    {% endif %}
-                      <i class="app-menu__icon fa fa-dashboard"></i>
-                    {% if item.buff %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag" style="color:crimson"></i></a>
-                    {% else %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
-                    {% endif %}
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a style="color:white;margin-left:30px">
-                 35°-45°患者 &nbsp;&nbsp;&nbsp;
-              </a><a data-toggle="collapse" data-parent="#accordion"  href="#collapseFour"><i class="fa fa-chevron-down" style="color:white"></i></a>
-            </h4>
-          </div>
-          <div id="collapseFour" class="panel-collapse collapse"  style="color:white">
-            <div class="panel-body">
-              <ul class="app-menu">
-                {% for item in user_info.patient %}
-                  {% if item.category == '3' %}
-                    {% if item.debuff %}
-                      <li><a class="app-menu__item" id='{{item._id}}' style="background-color:coral">
-                    {% else %}
-                      <li><a class="app-menu__item" id='{{item._id}}'>
-                    {% endif %}
-                      <i class="app-menu__icon fa fa-dashboard"></i>
-                    {% if item.buff %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag" style="color:crimson"></i></a>
-                    {% else %}
-                      <span class="app-menu__label">{{item.basicInfo.name}}</span><i class="fa fa-flag-o"></i></a>
-                    {% endif %}
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
+        <h4 class="panel-title">
+            <a href="" style="color:white;margin-left:30px">
+            穿戴数据及日志
+            </a>
+        </h4>
+        <br>
+        <h4 class="panel-title">
+            <a href="/fault" style="color:white;margin-left:30px">
+            故障检测
+            </a>
+        </h4>
     </aside>
 
     <main class="app-content">
@@ -266,67 +139,31 @@
         </div>
       </div>
 
-
-
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" 
-                 href="#collapseInfo" style="margin-left:40%">
-                 诊断历史<i class="fa fa-angle-double-down"></i>
-              </a>
-            </h4>
-          </div>
-          <div id="collapseInfo" class="panel-collapse collapse in" style="margin-left:0%">
-            <div class="panel-body">
-              <table class="table">
-                <thead>
-                <tr>
-                    <th>诊断日期</th>
-                    <th>姓名</th>
-                    <th>检查项目</th>
-                    <th>检查情况</th>
-                    <th>建议最小佩戴时间</th>
-                </tr>
-                </thead>
-
-                <tbody id="treatment_history">
-
-                </tbody>
-            </table>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
       <!-- <div id="slider" style="width:1000px;height:12px;margin-left: 0%;margin-top:30px"></div>
       <span style="margin-bottom: 30px;margin-left: 0%;font-size: 20px">30天前 ———— 0天前数据</span> -->
-
-      <div class="row" style="margin-left:0%">
-        <div class="col-md-6">
-          <div class="tile" style="width:1600px">
-            <h3 class="tile-title">患者佩戴时间数据</h3>
-              <div id="patientTime" style="width: 1700px; height: 422px;"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row" style="margin-left:0%">
-        <div class="col-md-8">
-          <div class="tile" style="width:1100px">
-            <h3 class="tile-title">压力传感器数据</h3>
-              <div id="pressureData1" style="width: 1700px; height: 300px;"></div>
-              <div id="pressureData2" style="width: 1700px; height: 300px;"></div>
-              <div id="pressureData3" style="width: 1700px; height: 300px;"></div>
-          </div>
-        </div>
-        <div class="col-md-4">
-            <div id="pressure_detail" style="width: 300px; height: 900px; margin-top:70px;margin-left: 30px">
+        <div class="row" style="margin-left:0%">
+            <div class="col-md-4">
+                <div id="pressure_detail" style="width: 450px; height: 900px; margin-top:70px;margin-left: 30px"></div>
             </div>
-          </div>
+            <div class="col-md-8">
+                <div class="tile" style="width:1100px">
+                <h3 class="tile-title">压力传感器数据</h3>
+                    <div id="pressureData1" style="width: 1000px; height: 300px;"></div>
+                    <div id="pressureData2" style="width: 1000px; height: 300px;"></div>
+                    <div id="pressureData3" style="width: 1000px; height: 300px;"></div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="row" style="margin-left:0%">
+            <div class="col-md-6">
+                <div class="tile" style="width:1600px">
+                    <h3 class="tile-title">患者佩戴时间数据</h3>
+                    <div id="patientTime" style="width: 1700px; height: 422px;"></div>
+                </div>
+            </div>
         </div>
+
         <div id="3d" style="width:1400px;height:700px;margin-bottom:100px">
         
         </div>
@@ -399,13 +236,13 @@
         }
       })
     })
-
     let patient_time = echarts.init(document.getElementById('patientTime'));
     let pressure_data1 = echarts.init(document.getElementById('pressureData1'));
     let pressure_data2 = echarts.init(document.getElementById('pressureData2'));
     let pressure_data3 = echarts.init(document.getElementById('pressureData3'));
     let pressure_detail = echarts.init(document.getElementById('pressure_detail'));
     let _3d = echarts.init(document.getElementById('3d'));
+
     time_option = {
       title: {
           text: '患者穿戴时间'
@@ -526,7 +363,7 @@
       },
       grid: {
           top: 80,
-          bottom: 30
+          bottom: 30,
       },
       xAxis: {
           type : 'value',
@@ -546,6 +383,7 @@
             name:'压力值',
             type:'bar',
             stack: '总量',
+            barWidth: 65,
             label: {
                 normal: {
                     show: true,
@@ -646,7 +484,6 @@ _3d.setOption(option = {
 });
 
 {# }); #}
-
 
         patient_time.setOption(time_option);
         pressure_data1.setOption(pressure_option);

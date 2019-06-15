@@ -34,6 +34,11 @@ class UserController extends Controller {
     // console.log(user_info);
     await ctx.render('managePage', { user_info });
   }
+
+  async parent() {
+    const { ctx } = this;
+    await ctx.render('parent');
+  }
 }
 
 module.exports = UserController;
