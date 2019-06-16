@@ -106,46 +106,16 @@
 
     <main class="app-content">
       <div class="row">
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
-            <div class="info">
-              <h4 id="name">姓名：</h4>
-              <h4 id="age">年龄：</h4>
-              <h4 id="gender">性别：</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
-            <div class="info">
-                <h4 id="treatment_time">治疗时间：</h4>
-                <h4 id="last_time">上次复查时间:</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small primary coloured-icon"><i class="icon fa fa-clock-o fa-3x"></i>
-            <div class="info">
-                <h4 id="sug_wear_time">目前建议穿戴时间:</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
-            <div class="info">
-                <h4 id="sport_time">运动量：</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-md-6 col-lg-4">
+          <font style="font-size:30px">左上压力传感器数据</font>
           <div id="3d1" style="width:500px;height:600px;margin-bottom:100px"></div>
         </div>
         <div class="col-md-6 col-lg-4">
+          <font style="font-size:30px">左下压力传感器数据</font>
           <div id="3d2" style="width:500px;height:600px;margin-bottom:100px"></div>
         </div>
         <div class="col-md-6 col-lg-4">
+          <font style="font-size:30px">右中压力传感器数据</font>
           <div id="3d3" style="width:500px;height:600px;margin-bottom:100px"></div>
         </div>
       </div>
@@ -168,7 +138,7 @@
                 </tr>
                 <tr>
                   <th>左下</th>
-                  <th>A</th>
+                  <th>E</th>
                   <th>20190604</th>
                   <th>超出阈值</th>
                 </tr>
@@ -249,11 +219,11 @@
     let _3d2 = echarts.init(document.getElementById('3d2'));
     let _3d3 = echarts.init(document.getElementById('3d3'));
 
-var data1 = [[0,0,59],[0,1,43],[0,2,44],[1,0,50],[1,1,46],[1,2,50],[2,0,45],[2,1,54],[2,2,41]];
+var data1 = [[0,0,45+10*Math.random()],[0,1,45+10*Math.random()],[0,2,45+10*Math.random()],[1,0,45+10*Math.random()],[1,1,45+10*Math.random()],[1,2,45+10*Math.random()],[2,0,45+10*Math.random()],[2,1,45+10*Math.random()],[2,2,45+10*Math.random()]];
 
-var data2 = [[0,0,59],[0,1,43],[0,2,44],[1,0,50],[1,1,46],[1,2,50],[2,0,45],[2,1,54],[2,2,41]];
+var data2 = [[0,0,45+10*Math.random()],[0,1,45+10*Math.random()],[0,2,45+10*Math.random()],[1,0,45+10*Math.random()],[1,1,60+5*Math.random()],[1,2,45+10*Math.random()],[2,0,45+10*Math.random()],[2,1,45+10*Math.random()],[2,2,45+10*Math.random()]];
 
-var data3 = [[0,0,59],[0,1,43],[0,2,44],[1,0,50],[1,1,46],[1,2,50],[2,0,45],[2,1,54],[2,2,41]];
+var data3 = [[0,0,45+10*Math.random()],[0,1,45+10*Math.random()],[0,2,45+10*Math.random()],[1,0,45+10*Math.random()],[1,1,45+10*Math.random()],[1,2,45+10*Math.random()],[2,0,45+10*Math.random()],[2,1,45+10*Math.random()],[2,2,45+10*Math.random()]];
 
 _3d1.setOption(option = {
     visualMap: {
@@ -364,7 +334,7 @@ _3d2.setOption(option = {
           normal: {
                     //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
             color: function (params) {
-                var colorList = ['#6666ff', '#6666ff', '#6666ff', '#6666ff', '#6666ff', '#6666ff', '#6666ff', '#6666ff', '#6666ff']; //每根柱子的颜色
+                var colorList = ['#6666ff', '#6666ff', '#6666ff', '#6666ff', '#ff9900', '#6666ff', '#6666ff', '#6666ff', '#6666ff']; //每根柱子的颜色
                 return colorList[params.dataIndex];
             }
         }
