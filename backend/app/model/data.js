@@ -4,8 +4,8 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
   const data = new Schema({
-    pressure: Array,
-    avarage: Number,
+    pressure: [[ Number ]],
+    avarage: [[ Number ]],
     time: Number,
   });
   return mongoose.model('data', data, 'data');

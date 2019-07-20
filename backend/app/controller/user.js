@@ -45,6 +45,21 @@ class UserController extends Controller {
     await ctx.render('fault');
   }
 
+  async newData() {
+    const { ctx } = this;
+    const { pressure } = ctx.request.body;
+    const avarage = [];
+    // pressure [[1,2,3,4,5,6],[1,2,3,4,5,6],]
+    for (const item of pressure) {
+      avarage.push(ctx.helper.ava(ctx.helper.toNum(item)));
+    }
+    await ctx.model.Data.create({
+      pressure,
+      avarage,
+      time: new Date(),
+    });
+    ctx.body = 'fine';
+  }
 }
 
 module.exports = UserController;

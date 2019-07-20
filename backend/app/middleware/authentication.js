@@ -5,7 +5,7 @@ module.exports = () => {
     await next();
     const user = ctx.session.user;
     const routeStr = ctx.request.path;
-    if (routeStr === '/signinPage' || routeStr === '/') {
+    if (routeStr === '/signinPage' || routeStr === '/' || routeStr === '/newData') {
       return;
     }
     if (!user) {

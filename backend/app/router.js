@@ -25,6 +25,9 @@ module.exports = app => {
   // 用户登出
   // router.post('/signout', controller.user.signout);
 
+  // android端发出数据记录
+  router.post('/newData', controller.user.newData);
+
   // 获取该医生的患者列表
   // type 0 1 2 3  根据度数分类患者类型
   // router.post('/patientList', controller.patient.getPatientList);

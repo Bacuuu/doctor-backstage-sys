@@ -10,7 +10,7 @@ docSys = myClient['docSys']
 coll = docSys['data']
 
 ser = serial.Serial('COM7', 9600, timeout=0.2)
-
+# [1,2,3,4,5,6]
 while True:
 	rec = ser.readline()
 	new_rec = []
