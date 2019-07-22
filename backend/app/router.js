@@ -7,7 +7,7 @@ module.exports = app => {
   const { router, controller } = app;
 
   // 首页
-  router.get('/', controller.home.index);
+  router.get('/', controller.home.signin);
 
   // 登陆界面
   router.get('/signinPage', controller.home.signin);
