@@ -193,7 +193,7 @@
 </div>
 <div class="pace-activity"></div></div>
     <!-- Navbar-->
-    <header class="app-header" style="background-color:rgb(112,125,124)"><a class="app-header__logo" style="background-color: rgb(112,125,124);box-shadow: 5px 0px 10px #000000;" href=""><img src="../public/assets/img/logo1.png" alt="" style="width:82px;height:24px;margin-bottom:15px;"></a>
+    <header class="app-header" style="background-color:rgb(112,125,124)"><a class="app-header__logo" style="background-color: rgb(112,125,124);box-shadow: 5px 0px 10px #555555;" href=""><img src="../public/assets/img/logo1.png" alt="" style="width:82px;height:24px;margin-bottom:15px;"></a>
       {# <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="http://pratikborsadiya.in/vali-admin/index.html#" data-toggle="sidebar" aria-label="Hide Sidebar"></a> #}
       <!-- Navbar Right Menu-->
       {# <ul class="app-nav"> #}
@@ -400,7 +400,7 @@
     <main class="app-content" style="background-color:rgb(249,249,249)">
       <div class="row">
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small coloured-icon" style="color: #ffffff;box-shadow: 5px 0px 10px #000000"><i class="fa fa-users fa-3x" style="color: #000000;margin: 15px 24px 15px 24px "></i>
+          <div class="widget-small primary coloured-icon" style="color: #ffffff;box-shadow: 5px 0px 10px #999999"><i class="fa fa-users fa-3x" style="color: #000000;margin: 15px 24px 15px 24px "></i>
             <div class="info">
               <h4 id="name" style="color: black">姓名：</h4>
               <h4 id="age" style="color: black">年龄：</h4>
@@ -409,7 +409,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small info coloured-icon" style="color: #ffffff; box-shadow: 5px 0px 10px #000000"><i class="fa fa-thumbs-o-up fa-3x" style="color: #000000;margin: 15px 24px 15px 24px "></i>
+          <div class="widget-small info coloured-icon" style="color: #ffffff; box-shadow: 5px 0px 10px #999999"><i class="fa fa-thumbs-o-up fa-3x" style="color: #000000;margin: 15px 24px 15px 24px "></i>
             <div class="info">
                 <h4 id="treatment_time" style="color: black">治疗时间：</h4>
                 <h4 id="last_time" style="color: black">上次复查时间:</h4>
@@ -417,14 +417,14 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small primary coloured-icon" style="color: #ffffff; box-shadow: 5px 0px 10px #000000"><i class="fa fa-clock-o fa-3x" style="color: #000000;margin-left:24px;margin: 15px 24px 15px 24px "></i>
+          <div class="widget-small primary coloured-icon" style="color: #ffffff; box-shadow: 5px 0px 10px #999999"><i class="fa fa-clock-o fa-3x" style="color: #000000;margin-left:24px;margin: 15px 24px 15px 24px "></i>
             <div class="info">
                 <h4 id="sug_wear_time" style="color: black">目前建议穿戴时间:</h4>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small info coloured-icon" style="color: #ffffff; box-shadow: 5px 0px 10px #000000"><i class="fa fa-thumbs-o-up fa-3x" style="color: #000000;margin-left:24px;margin: 15px 24px 15px 24px "></i>
+          <div class="widget-small info coloured-icon" style="color: #ffffff; box-shadow: 5px 0px 10px #999999"><i class="fa fa-thumbs-o-up fa-3x" style="color: #000000;margin-left:24px;margin: 15px 24px 15px 24px "></i>
             <div class="info">
                 <h4 id="sport_time" style="color: black">运动量：2580</h4>
             </div>
@@ -459,7 +459,7 @@
                 <tbody id="treatment_history">
                 </tbody>
               </table>
-            <div>
+            <div style="margin-left:13px; margin-bottom: 30px">
             <img src="../public/assets/img/x-1.jpg" alt="" style="width:200px;height:auto">
             <img src="../public/assets/img/x-2.jpg" alt="" style="width:200px;height:auto">
             <img src="../public/assets/img/x-3.jpg" alt="" style="width:200px;height:auto">
@@ -751,9 +751,10 @@
           type: 'line',
           smooth: true,
           areaStyle: {
-              color: 'rgba(182,209,216,1)',
+              color: '#D7E6E5',
           },
           data: [19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,17,19,23,21,22,22,17,22,0],
+            color: '#2A333A',
           markLine: {
               silent: true,
               data: [{
@@ -813,15 +814,16 @@
             type: 'line',
             smooth: true,
             areaStyle: {
-                color: 'rgba(200,0,0,0.1)',
+                color: '#D7E6E5',
             },
             data: data1,
-            markLine: {
-                silent: true,
-                data: [{
-                    yAxis: 22,
-                }]
-            }
+            color: '#2A333A',
+            // markLine: {
+            //     silent: true,
+            //     data: [{
+            //         yAxis: 22,
+            //     }]
+            // }
         }]
     };
 
@@ -860,15 +862,16 @@
             type: 'line',
             smooth: true,
             areaStyle: {
-                color: 'rgba(200,0,0,0.1)',
+                color: '#D7E6E5',
             },
             data: data2,
-            markLine: {
-                silent: true,
-                data: [{
-                    yAxis: 22,
-                }]
-            }
+            color: '#2A333A',
+            // markLine: {
+            //     silent: true,
+            //     data: [{
+            //         yAxis: 22,
+            //     }]
+            // }
         }]
     };
 
@@ -907,15 +910,16 @@
             type: 'line',
             smooth: true,
             areaStyle: {
-                color: 'rgba(200,0,0,0.1)',
+                color: '#D7E6E5',
             },
             data: data3,
-            markLine: {
-                silent: true,
-                data: [{
-                    yAxis: 22,
-                }]
-            }
+            color: '#2A333A',
+            // markLine: {
+            //     silent: true,
+            //     data: [{
+            //         yAxis: 22,
+            //     }]
+            // }
         }]
     };
 
