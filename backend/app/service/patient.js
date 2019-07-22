@@ -91,7 +91,7 @@ class PatientService extends Service {
 
   async ajaxGetData() {
     const { ctx } = this;
-    return await ctx.model.Data.findOne({}).sort({
+    return await ctx.model.Ajaxdata.findOne({}).sort({
       time: -1,
     });
   }
