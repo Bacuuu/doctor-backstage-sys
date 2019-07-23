@@ -31,12 +31,12 @@
     
       
 <div class="chatContainer" style="z-index: 999">
-    <div class="chatBtn" style="background-color: rgb(214,229,229)">
+    <div class="chatBtn" style="background-color: #71767d">
         <i class="iconfont icon-xiaoxi1"></i>
     </div>
     <div class="chat-message-num">7</div>
     <div class="chatBox" ref="chatBox">
-        <div class="chatBox-head">
+        <div class="chatBox-head" style="background-color: #71767d">
             <div class="chatBox-head-one">
                 患者家长列表
                 <div class="chat-close" style="margin: 10px 10px 0 0;font-size: 14px">关闭</div>
@@ -193,7 +193,7 @@
 </div>
 <div class="pace-activity"></div></div>
     <!-- Navbar-->
-    <header class="app-header" style="background-color:rgb(112,125,124)"><a class="app-header__logo" style="background-color: rgb(112,125,124);box-shadow: 5px 0px 10px #555555;" href=""><img src="../public/assets/img/logo1.png" alt="" style="width:82px;height:24px;margin-bottom:15px;"></a>
+    <header class="app-header" style="background-color:#71767D"><a class="app-header__logo" style="background-color: #71767D;box-shadow: 5px 0px 10px #555555;" href=""><img src="../public/assets/img/logo1.png" alt="" style="width:82px;height:24px;margin-bottom:15px;"></a>
       {# <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="http://pratikborsadiya.in/vali-admin/index.html#" data-toggle="sidebar" aria-label="Hide Sidebar"></a> #}
       <!-- Navbar Right Menu-->
       {# <ul class="app-nav"> #}
@@ -257,7 +257,7 @@
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 
-    <aside class="app-sidebar">
+    <aside class="app-sidebar" style="background-color: #94999E">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../public/assets/img/48.jpg" alt="User Image">
         <div>
           <p class="app-sidebar__user-name">{{user_info.name}}</p>
@@ -436,10 +436,10 @@
 
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
-          <div class="panel-heading">
+          <div class="panel-heading" style="margin-bottom: 30px">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" 
-                 href="#collapseInfo" style="margin-left:40%" style="color: rgb(28,62,97)">
+                 href="#collapseInfo" style="margin-left:40%; color : #000000;" >
                  诊断历史<i class="fa fa-angle-double-down"></i>
               </a>
             </h4>
@@ -751,12 +751,15 @@
           type: 'line',
           smooth: true,
           areaStyle: {
-              color: '#D7E6E5',
+              color: '#D2DCEB',
           },
           data: [19,23,24,15,15,21,23,22,22,22,21,24,22,24,23,21,20,24,16,23,22,21,17,19,23,21,22,22,17,22,0],
             color: '#2A333A',
           markLine: {
               silent: true,
+              lineStyle: {
+                color: '#ff0000',
+              },
               data: [{
                   yAxis: 22,
               }]
@@ -814,7 +817,7 @@
             type: 'line',
             smooth: true,
             areaStyle: {
-                color: '#D7E6E5',
+              color: '#D2DCEB',
             },
             data: data1,
             color: '#2A333A',
@@ -862,7 +865,7 @@
             type: 'line',
             smooth: true,
             areaStyle: {
-                color: '#D7E6E5',
+              color: '#D2DCEB',
             },
             data: data2,
             color: '#2A333A',
@@ -910,7 +913,7 @@
             type: 'line',
             smooth: true,
             areaStyle: {
-                color: '#D7E6E5',
+              color: '#D2DCEB',
             },
             data: data3,
             color: '#2A333A',
